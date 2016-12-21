@@ -89,3 +89,6 @@ spec:
       volumes:
       - name: es-persistent-storage
         emptyDir: {}
+      - name: hostproc
+        hostPath:
+          path: /proc
