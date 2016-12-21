@@ -42,6 +42,7 @@ spec:
             {
                 "name": "max-map-count-set",
                 "image": "quay.io/samsung_cnct/set_max_map_count:1.1",
+                "imagePullPolicy": "Always",
                 "volumeMounts": [
                     {
                         "name": "hostproc",
@@ -66,7 +67,6 @@ spec:
         - containerPort: 9300
           name: transport
           protocol: TCP
-        imagePullPolicy: Always
         volumeMounts:
         - name: es-persistent-storage
           mountPath: /data
