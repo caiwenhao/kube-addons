@@ -27,8 +27,9 @@ metadata:
 spec:
   replicas: 1
   selector:
-    k8s-app: elasticsearch-logging
-    version: v1
+    matchLabels:
+      k8s-app: elasticsearch-logging
+      version: v1
   template:
     metadata:
       labels:
