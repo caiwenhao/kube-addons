@@ -76,7 +76,7 @@ spec:
         - name: NODE_MASTER
           value: "true"
         - name: SERVICE
-          value: "elasticsearch-cluster"
+          value: "elasticsearch-logging"
         - name: ES_JAVA_OPTS
           value: "-Xms4g -Xmx4g -Djava.net.preferIPv4Stack=true"
         - name: KUBERNETES_NAMESPACE
