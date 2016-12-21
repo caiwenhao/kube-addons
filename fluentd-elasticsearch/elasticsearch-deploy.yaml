@@ -86,6 +86,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: metadata.name
+      imagePullPolicy: Always
       volumes:
       - name: es-persistent-storage
         emptyDir: {}
