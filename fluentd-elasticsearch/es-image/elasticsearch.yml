@@ -1,0 +1,23 @@
+cluster.name: ${KUBERNETES_NAMESPACE}-es
+network.host: 0.0.0.0
+
+node:
+  data: ${NODE_DATA}
+  master: ${NODE_MASTER}
+  name: ${NODE_NAME}
+  ingest: false
+
+cloud:
+  kubernetes:
+    service: ${SERVICE}
+    namespace: ${KUBERNETES_NAMESPACE}
+
+gateway:
+  #recover_after_nodes: 70-80% of running nodes
+  #expected_nodes: total number of nodes
+  recover_after_time: 5m
+
+discovery:
+  type: kubernetes
+  zen:
+    minimum_master_nodes: 2
