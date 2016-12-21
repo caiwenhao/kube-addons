@@ -4,7 +4,7 @@ metadata:
   name: elasticsearch
   namespace: kube-system
   labels:
-    app: elasticsearch
+    k8s-app: elasticsearch-logging
 spec:
   ports:
   - port: 9200
