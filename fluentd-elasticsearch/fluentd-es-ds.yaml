@@ -1,19 +1,19 @@
 apiVersion: extensions/v1beta1
 kind: DaemonSet
 metadata:
-  name: fluentd-es-v1.20
+  name: fluentd-es-v2.3.0
   namespace: kube-system
   labels:
     k8s-app: fluentd-es
     kubernetes.io/cluster-service: "true"
-    version: v1.20
+    version: v2.3.0
 spec:
   template:
     metadata:
       labels:
         k8s-app: fluentd-es
         kubernetes.io/cluster-service: "true"
-        version: v1.20
+        version: v2.3.0
     spec:
       containers:
       - name: fluentd-es
