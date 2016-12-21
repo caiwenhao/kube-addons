@@ -66,6 +66,7 @@ spec:
         - containerPort: 9300
           name: transport
           protocol: TCP
+        imagePullPolicy: Always
         volumeMounts:
         - name: es-persistent-storage
           mountPath: /data
@@ -86,7 +87,6 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: metadata.name
-      imagePullPolicy: Always
       volumes:
       - name: es-persistent-storage
         emptyDir: {}
