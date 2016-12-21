@@ -15,7 +15,7 @@ spec:
   selector:
     k8s-app: elasticsearch-logging
 ---
-apiVersion: v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: elasticsearch-logging-v1
