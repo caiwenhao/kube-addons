@@ -13,7 +13,7 @@ spec:
     name: transport
   clusterIP: None
   selector:
-    app: elasticsearch
+    k8s-app: elasticsearch-logging
 ---
 apiVersion: v1
 kind: Service
