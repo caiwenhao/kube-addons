@@ -30,6 +30,8 @@ spec:
         - name: varlibdockercontainers
           mountPath: /var/lib/docker/containers
           readOnly: true
+        - name: fluent
+          mountPath: /fluentd/etc/
       nodeSelector:
         alpha.kubernetes.io/fluentd-ds-ready: "true"
       terminationGracePeriodSeconds: 30
@@ -40,3 +42,9 @@ spec:
       - name: varlibdockercontainers
         hostPath:
           path: /var/lib/docker/containers
+      - name: fluent
+        configMap:
+          name: fluent
+          items:
+          - key: fluent.conf
+            path: fluent.conf
