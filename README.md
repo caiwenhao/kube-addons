@@ -1,4 +1,6 @@
-# kube-addons
+#kubernetes组件
+
+@(马克飞象)[k8s]
 
 ---
 ##组件
@@ -90,8 +92,8 @@ kubectl label node 10-8-50-182 alpha.kubernetes.io/fluentd-ds-ready=true
 > 2.  fluentd 的插件`fluent-plugin-kubernetes_metadata_filter` 通过apiserver,当pod创建的时候,建立日志目录映射关系, 并解析kubernetes日志格式.
 
 **进一步优化**
-> 把
+> 把fluent.conf放入configMap
 
 ```
-
+kubectl create configmap fluent  --from-file=./fluent.conf -n kube-system
 ```
