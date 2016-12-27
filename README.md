@@ -1,4 +1,4 @@
-#kubernetes组件
+#kubernetes 组件
 
 @(马克飞象)[k8s]
 
@@ -43,6 +43,7 @@ canal-node-rc2t6                       2m           57Mi
 > 由kubernetes的UI演变而来, 目前已经集成监控展示与日常的创建与删除操作, 另一方面,可以通过ui界面来学习kubernetes的使用,认识常用的配置类型
 > https://github.com/kubernetes/dashboard#kubernetes-dashboard
 ```
+kubectl create -f https://rawgit.com/kubernetes/dashboard/master/src/deploy/kubernetes-dashboard.yaml
 kubectl get pods --all-namespaces | grep dashboard
 ```
 
